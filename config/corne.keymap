@@ -25,6 +25,17 @@
         };
     };
 
+    behaviors {
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -32,14 +43,14 @@
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
 // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ; | 
-// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
+// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | ,    |  .   | / |
+//             |LCTRL|LS/es|1/Bspc|    |1/Sp |2/ENT |  2   |
                         display-name = "Base";
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &kp P
    &HRM_custom LGUI A &HRM_custom LALT S &HRM_custom LCTRL D &HRM_custom LSHIFT F &kp G     &kp H &HRM_custom RSHIFT J &HRM_custom RCTRL K &HRM_custom RALT L &HRM_custom RGUI SEMICOLON
    &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp SLASH
-        &kp LCTRL &lt 1 ESC &lt 1 BSPC     &lt 1 SPACE &lt 2 RET &mo 2
+        &kp LCTRL &bhm LSHIFT ESC &lt 1 BSPC     &lt 1 SPACE &lt 2 RET &mo 2
                         >;
                 };
 
@@ -67,18 +78,35 @@
                         >;
                 };
 
-                what_layer {
+                keyboard_layer {
             // -----------------------------------------------------------------------------------------
             // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
             // | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
             // |     |     |     |     |     |   |     |     |     |     |     |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            //                   | GUI |     | SPC |   | ENT |     | ALT |
 
                         bindings = <
 &kp N1        &kp N2        &kp N3        &kp N4    &kp N5    &kp N6    &kp N7     &kp N8  &kp N9     &kp N0   &bt BT_SEL 0  &bt BT_SEL 1
 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans     &trans   &trans        &trans
 &trans        &trans        &trans        &trans    &trans    &trans    &kp LGUI   &trans  &kp SPACE  &kp RET  &trans        &kp RALT
-                    >;
+                        >;
                 };
+
+                shift_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
+            // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ; | 
+            // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | ,    |  .   | / |
+            //             |LCTRL|     |1/Bspc|    |1/SP |2/ENT |  2   |
+
+                        display-name = "Shift";
+                        bindings = <
+  &kp LS(Q)  &kp LS(W)  &kp LS(E)      &kp LS(R)        &kp LS(T)     &kp LS(Y)    &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)
+  &kp LS(A)  &kp LS(S)  &kp LS(LCTRL)  &kp LS(F)        &kp LS(G)     &kp LS(H)    &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMICOLON)
+  &kp LS(Z)  &kp LS(X)  &kp LS(C)      &kp LS(V)        &kp LS(B)     &kp LS(N)    &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)
+                        &kp LCTRL      &trans  &lt 1 BSPC    &lt 1 SPACE  &lt 2 RET  &mo 2
+                        >;
+                };
+
         };
 };
