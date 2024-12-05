@@ -80,40 +80,68 @@
                 };
 
                 nav_layer {
+                        display-name = "Nav";
                         bindings = <
-&kp TAB      &kp HOME      &kp UP           &kp END          &kp PAGE_UP      &kp KP_DIVIDE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans             &kp CAPS    &kp LEFT
-&kp DOWN     &kp RIGHT     &kp PAGE_DOWN    &kp KP_SUBTRACT  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_0  &mo 4            &kp K_VOLUME_DOWN  &kp K_MUTE  &kp K_VOLUME_UP
-&kp LS(TAB)  &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT         &trans           &trans           &kp DELETE       &trans             &trans      &trans
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp TAB       &kp HOME      &kp UP        &kp END       &kp PAGE_UP     &kp KP_DIVIDE &kp KP_N7     &kp KP_N8    &kp KP_N9      &trans       
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp CAPS      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PAGE_DOWN   &kp KP_SUBTRACT &kp KP_N4   &kp KP_N5     &kp KP_N  6  &kp KP_N0     
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &mo 4         &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP  &kp LS(TAB)     &kp KP_COMMA  &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_DOT    
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                ___           ___           &kp DELETE       ___          ___           ___          
+//                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
                 symbols_layer {
+                        display-name = "Symbols"
                         bindings = <
-&kp CARET              &kp LESS_THAN    &kp GREATER_THAN     &kp DOLLAR    &kp PERCENT    &kp AT           &kp AMPS  &kp STAR  &kp LS(APOSTROPHE)  &kp GRAVE  &kp LBRC  &kp LEFT_PARENTHESIS
-&kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL            &kp BSLH      &kp PLUS       &kp MINUS        &kp FSLH  &kp DQT   &kp TILDE           &kp LBKT   &kp RBKT  &kp UNDER
-&kp LS(POUND)          &kp PIPE         &kp LS(EXCLAMATION)  &kp LS(SEMI)  &kp LS(COLON)  &kp LS(QMARK)    &trans    &trans    &trans              &trans     &trans    &trans
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp CARET   &kp LESS_THAN &kp GREATER_THAN &kp DOLLAR   &kp PERCENT     &kp AT        &kp AMPS      &kp STAR      &kp LS(APOS)  &kp GRAVE
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp LBRC      &kp LPAR      &kp RPAR      &kp RIGHT_BRACE  &kp EQUAL    &kp BSLH      &kp PLUS      &kp MINUS     &kp FSLH      &kp DQT
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp TILDE     &kp LBKT      &kp RBKT      &kp UNDER     &kp LS(POUND)  &kp PIPE       &kp LS(EXCL)  &kp LS(SEMI)  &kp LS(COLON) &kp LS(QMARK)
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                ___           ___           ___             ___           ___           ___          
+//                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
-                Function_layer {
+                function_layer {
+                        display-name = "Functions"
                         bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans    &trans  &trans  &trans  &trans   &kp F5   &kp F6
-&kp F7  &kp F8  &trans  &trans  &trans  &trans    &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp F1        &kp F2        &kp F3        &kp F4        ___             ___           ___           ___           ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp F5        &kp F6        &kp F7        &kp F8        ___             ___           ___           ___           ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp F9        &kp F10       &kp F11       &kp F12       ___             ___           ___           ___           ___           ___
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                ___           ___           ___             ___           ___           ___          
+//                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
-                keyboard_layer {
+                bluetooth_layer {
             // -----------------------------------------------------------------------------------------
             // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
             // | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
             // |     |     |     |     |     |   |     |     |     |     |     |
             //                   | GUI |     | SPC |   | ENT |     | ALT |
 
+                        display-name = "bluetooth"
                         bindings = <
-&kp N1        &kp N2        &kp N3        &kp N4    &kp N5    &kp N6    &kp N7     &kp N8  &kp N9     &kp N0   &bt BT_SEL 0  &bt BT_SEL 1
-&bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans     &trans   &trans        &trans
-&trans        &trans        &trans        &trans    &trans    &trans    &kp LGUI   &trans  &kp SPACE  &kp RET  &trans        &kp RALT
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    ___             ___           ___           ___           ___           ___           ___           &kp UP        ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &kp LEFT      &kp DOWN     &kp RIGHT     ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___             ___           ___           ___           ___           ___           ___
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                &kp LGUI      ___           &kp SPACE       &kp RET       ___           &kp RALT   
+//                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
 
