@@ -43,10 +43,10 @@
 #define HOME_A &HRM_custom LGUI A
 #define HOME_S &HRM_custom LALT S
 #define HOME_D &HRM_custom LCTRL D
-#define HOME_F &HRM_custom LSHIFT F
+#define HOME_F &HRM_custom LSHIFT F    // if used
 
 // Right-hand home row mods
-#define HOME_J &HMR_custom RSHIFT J
+#define HOME_J &HMR_custom RSHIFT J    // if used
 #define HOME_K &HRM_custom RCTRL K
 #define HOME_L &HRM_custom RALT L 
 #define HOME_SMCLN &HRM_custom RGUI SEMICOLON
@@ -89,7 +89,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &mo 4         &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP  &kp LS(TAB)     &kp KP_COMMA  &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_DOT    
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                ___           ___           &kp DELETE       ___          ___           ___          
+                                ___           ___           &kp DELETE      ___           ___           ___          
 //                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
