@@ -41,16 +41,10 @@
     };
 
 // Left-hand home row mods
-//#define HOME_A &HRM_custom LGUI A
-//#define HOME_S &HRM_custom LALT S
-//#define HOME_D &HRM_custom LCTRL D
-//#define HOME_F &HRM_custom LSHIFT F    // if used
-
-// pour tests
-#define HOME_A &bhm LGUI A
-#define HOME_S &bhm LALT S
-#define HOME_D &bhm LCTRL D
-#define HOME_F &bhm LSHIFT F    // if used
+#define HOME_A &HRM_custom LGUI A
+#define HOME_S &HRM_custom LALT S
+#define HOME_D &HRM_custom LCTRL D
+#define HOME_F &HRM_custom LSHIFT F    // if used
 
 // Right-hand home row mods
 #define HOME_J &HMR_custom RSHIFT J    // if used
