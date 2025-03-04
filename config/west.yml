@@ -1,12 +1,12 @@
 manifest:
   defaults:
-    remote: urob
+    remote: MaccoRozar
     
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: MaccoRozar
       url-base: https://github.com/MaccoRozar
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmkfirmware
