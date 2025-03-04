@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/key-labels/36.h"                                      // Source key-labels.
 
-
-
 / {
     chosen {
       zmk,matrix_transform = &five_column_transform;
